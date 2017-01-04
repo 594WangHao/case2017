@@ -1,0 +1,156 @@
+@import url('./reset.less');
+header {
+    height: 520px;
+    background: url('../img/banner.png');
+    background-size: cover;
+    position: relative;
+    font-family: 'SourceSansProLight';
+    .logo {
+        position: relative;
+        top: 14px;
+        left: 30px;
+    }
+    .banner {
+        color: #fff;
+        padding-right: 144px;
+        text-align: right;
+        h1 {
+            font-size: 60px;
+        }
+        p {
+            font-size: 20px;
+        }
+        .btn {
+            color: #fff;
+            margin-top: 80px;
+            font-size: 20px;
+            background: @blue;
+            border: none;
+            padding: 0.5em 2em;
+        }
+    }
+    nav {
+        width: 100%;
+        font-size: 18px;
+        position: absolute;
+        bottom: 0;
+        a {
+            color: #fff;
+            padding: 0.5em 1em;
+            display: inline-block;
+            &:focus,
+            &:hover {
+                text-decoration: none;
+                color: #000;
+                background: #fff;
+            }
+            &:hover .fa-sort-desc {
+                -webkit: transition: 0.6s;
+                -moz: transition: 0.6s;
+                -ms: transition: 0.6s;
+                -o: transition: 0.6s;
+                transition: 0.6s;
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+        }
+        .list-inline {
+            .active {
+                a {
+                    background: #fff;
+                    color: #000;
+                }
+            }
+            margin: 0;
+            padding: 0;
+            li {
+                padding: 0;
+            }
+            li+li {
+                margin-left: -3px;
+            }
+        }
+        .slideDown {
+            box-shadow: 10px 10px 10px #fafafa;
+            display: none;
+            min-width: 250px;
+            text-align: left;
+            position: absolute;
+            list-style: none;
+            padding: 0;
+            z-index: 9999;
+            padding-top: 10px;
+            a {
+                color: #000;
+                background: #fff;
+                width: 100%;
+                &:hover {
+                    background: @grey;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    padding-top: 100px;
+    .xi_an {
+        background: @grey;
+        padding: 20px 200px;
+    }
+    .list-inline {
+        padding: 100px 0;
+        li {
+            padding: 0 50px;
+        }
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.index {
+    padding-top: 80px;
+    h3 {
+        font-size: 36px;
+        margin: 0;
+    }
+    h4 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .col-lg-5 {
+        border-left: 2px solid @grey;
+    }
+    .important_dates {
+        dl {
+            padding-left: 20px;
+        }
+        dt {
+            float: left;
+            font-weight: bold;
+            clear: left;
+        }
+        dd {
+            padding-left: 110px;
+        }
+    }
+    .dates_location {
+        h5 {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+        p {
+            padding-left: 20px;
+        }
+    }
+}
+.construction{
+    h1{
+        font-size: 40px;
+        padding: 50px 0;
+    }
+}
