@@ -1,5 +1,20 @@
 @blue: #0078ff;
 @grey: #f5f5f5;
+@keyframes rotate{
+    from{
+        -webkit-transform:rotateZ(360deg);
+        -moz-transform:rotateZ(360deg);
+        -ms-transform:rotateZ(360deg);
+        -o-transform:rotateZ(360deg);
+        transform:rotateZ(360deg);
+    }to{
+        -webkit-transform:rotateZ(0deg);
+        -moz-transform:rotateZ(0deg);
+        -ms-transform:rotateZ(0deg);
+        -o-transform:rotateZ(0deg);
+        transform:rotateZ(0deg);
+    }
+}
 @font-face {
     font-family: 'SourceSansProLight';
     src: url('../fonts/SourceSansProLight.eot');
