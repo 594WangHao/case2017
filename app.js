@@ -39,4 +39,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3000, console.log('3000 port'))
+app.listen(3000, console.log('serer on 3000 port'))

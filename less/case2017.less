@@ -5,6 +5,7 @@ header {
     background-size: cover;
     position: relative;
     font-family: 'SourceSansProLight';
+    margin-bottom: 20px;
     .logo {
         position: relative;
         top: 14px;
@@ -34,6 +35,22 @@ header {
         font-size: 18px;
         position: absolute;
         bottom: 0;
+        .fa-sort-desc {
+            -webkit: transition: 0.6s;
+            -moz: transition: 0.6s;
+            -ms: transition: 0.6s;
+            -o: transition: 0.6s;
+            transition: 0.6s;
+        }
+        .active {
+            .fa-sort-desc {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+        }
         a {
             color: #fff;
             padding: 0.5em 1em;
@@ -43,18 +60,6 @@ header {
                 text-decoration: none;
                 color: #000;
                 background: #fff;
-            }
-            &:hover .fa-sort-desc {
-                -webkit: transition: 0.6s;
-                -moz: transition: 0.6s;
-                -ms: transition: 0.6s;
-                -o: transition: 0.6s;
-                transition: 0.6s;
-                -webkit-transform: rotate(90deg);
-                -moz-transform: rotate(90deg);
-                -ms-transform: rotate(90deg);
-                -o-transform: rotate(90deg);
-                transform: rotate(90deg);
             }
         }
         .list-inline {
@@ -70,7 +75,7 @@ header {
                 padding: 0;
             }
             li+li {
-                margin-left: -3px;
+                margin-left: -4px;
             }
         }
         .slideDown {
@@ -148,9 +153,36 @@ footer {
         }
     }
 }
-.construction{
-    h1{
+
+.construction {
+    h1 {
         font-size: 40px;
         padding: 50px 0;
     }
+}
+
+.dl-inline {
+    dt,
+    dd {
+        display: inline-block;
+    }
+    dt {
+        width: 48%;
+        text-align: right;
+        vertical-align: top;
+    }
+    dd {
+        padding-left: 10px;
+        width: 48%;
+        text-align: left;
+    }
+}
+
+.travel_information {
+    h3 {
+        color: @blue;
+    }
+    // ul{
+    //     padding-left: 1em;
+    // }
 }

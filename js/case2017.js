@@ -7,7 +7,7 @@ $(function() {
         '    <div class="banner">',
         '        <h1>IEEE CASE 2017</h1>',
         '        <p>13th IEEE Conference on Automation Science and Engineering</p>',
-        '        <p>August 20-23, 2017 Xi&apos;an, Chi&apos;a',
+        '        <p>August 20-23, 2017 Xi&apos;an  China',
         '        </p>',
         '        <a href="/calls_for_papers.html" class="btn">Call for Papers</a>',
         '    </div>',
@@ -89,23 +89,23 @@ $(function() {
         '            <li class="nav-top"><a>Sponsors/Exhibitions&nbsp;&nbsp;<span class="fa fa-sort-desc"></span></a></a>',
         '                <ul class="slideDown text-left">',
         '                    <li>',
-        '                        <a href="/sponsors/sponsors_patrons.html">Information</a>',
+        '                        <a href="/sponsors_exhibitions/sponsors_patrons.html">Information</a>',
         '                    </li>',
         '                    <li>',
-        '                        <a href="/sponsors/sponsors_2.html">Sponsors</a>',
+        '                        <a href="/sponsors_exhibitions/sponsors_2.html">Sponsors</a>',
         '                    </li>',
         '                    <li>',
-        '                        <a href="/sponsors/exhibitors.html">Exhibitors</a>',
+        '                        <a href="/sponsors_exhibitions/exhibitors.html">Exhibitors</a>',
         '                    </li>',
         '                </ul>',
         '            </li>',
         '            <li class="nav-top"><a>Hotel/Travel&nbsp;&nbsp;<span class="fa fa-sort-desc"></span></a>',
         '                <ul class="slideDown text-left">',
         '                    <li>',
-        '                        <a href="/hotel/hotel.html">Hotel</a>',
+        '                        <a href="/hotel_travel/hotel.html">Hotel</a>',
         '                    </li>',
         '                    <li>',
-        '                        <a href="/hotel/to_and_from_the_airport.html">To and From the Airport</a>',
+        '                        <a href="/hotel_travel/travel_information.html">Travel Information</a>',
         '                    </li>',
         '                </ul>',
         '            </li>',
@@ -119,7 +119,7 @@ $(function() {
         '                    </li>',
         '                </ul>',
         '            </li>',
-        '            <li class="nav-top"><a>Photos</a></li>',
+        '            <li class="nav-top"><a href="/photos/photos.html">Photos</a></li>',
         '        </ul>',
         '    </nav>',
         '</header>'
@@ -153,52 +153,63 @@ $(function() {
         '</footer>'
     ].join('');
 
-    footer.html(footerHTML)
+    footer.html(footerHTML);
 
-    // 导航栏事件绑定
     var navTop = $('.nav-top');
     var slideDown = $('.slideDown');
+    chooseActive();
+    
+    // 导航栏active选择
+    function chooseActive() {
+        var pathname = window.location.pathname;
+        var path = pathname.split('/')[1];
+        switch (path) {
+            case 'committees':
+                navTop.eq(1).addClass('active');
+                break;
+            case 'submission':
+                navTop.eq(2).addClass('active');
+                break;
+            case 'program':
+                navTop.eq(3).addClass('active');
+                break;
+            case 'registration':
+                navTop.eq(4).addClass('active');
+                break;
+            case 'sponsors_exhibitions':
+                navTop.eq(5).addClass('active');
+                break;
+            case 'hotel_travel':
+                navTop.eq(6).addClass('active');
+                break;
+            case 'attractions':
+                navTop.eq(7).addClass('active');
+                break;
+            case 'photos':
+                navTop.eq(8).addClass('active');
+                break;
+            default:
+                navTop.eq(0).addClass('active');
+        }
+    }
+    // 导航栏事件绑定    
     navTop.hover(function(e) {
-        var index = $(this).index() - 1;
+        var _this = $(this);
+        var index = _this.index() - 1;
+        _this.addClass('active');
         if (index >= 0) {
-            slideDown.eq(index).show()
+            slideDown.eq(index).show();
         }
+
     }, function(e) {
-        var index = $(this).index() - 1;
+        var _this = $(this);
+        var index = _this.index() - 1;
+        _this.removeClass('active');
         if (index >= 0) {
-            slideDown.eq(index).hide()
+            slideDown.eq(index).hide();
         }
+        chooseActive();
     })
 
-    // 导航栏active选择
-    var pathname = window.location.pathname;
-    var path = pathname.split('/')[1];
-    switch (path) {
-        case 'committees':
-            navTop.eq(1).addClass('active');
-            break;
-        case 'submission':
-            navTop.eq(2).addClass('active');
-            break;
-        case 'program':
-            navTop.eq(3).addClass('active');
-            break;
-        case 'registration':
-            navTop.eq(4).addClass('active');
-            break;
-        case 'sponsors':
-            navTop.eq(5).addClass('active');
-            break;
-        case 'hotel':
-            navTop.eq(6).addClass('active');
-            break;
-        case 'attractions':
-            navTop.eq(7).addClass('active');
-            break;
-        case 'photos':
-            navTop.eq(8).addClass('active');
-            break;
-        default:
-            navTop.eq(0).addClass('active');
-    }
+
 })
