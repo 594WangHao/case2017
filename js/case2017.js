@@ -9,7 +9,7 @@ $(function() {
         '        <p>13th IEEE Conference on Automation Science and Engineering</p>',
         '        <p>August 20-23, 2017 Xi&apos;an  China',
         '        </p>',
-        '        <a href="/calls_for_papers.html" class="btn">Call for Papers</a>',
+        '        <a href="/submission/calls_for_papers.html" class="btn">Call for Papers</a>',
         '    </div>',
         '    <nav>',
         '        <ul class="list-inline text-center">',
