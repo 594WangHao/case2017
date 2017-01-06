@@ -1,5 +1,5 @@
 $(function() {
-    // header和footer插入
+    // header插入
     var header = $("#header");
     var headerHTML = [
         '<header>',
@@ -11,7 +11,8 @@ $(function() {
         '        </p>',
         '        <a href="/submission/calls_for_papers.html" class="btn">Call for Papers</a>',
         '    </div>',
-        '    <nav class="container">',
+        // '    <nav class="container">',
+        '    <nav class="text-center">',
         '        <ul class="list-inline">',
         '            <li class="nav-top"><a href="/index.html">Home</a>',
         '            </li>',
@@ -119,7 +120,7 @@ $(function() {
         '                    </li>',
         '                </ul>',
         '            </li>',
-        // '            <li class="nav-top"><a href="/photos/photos.html">Photos</a></li>',
+        '            <li class="nav-top"><a href="/photos/photos.html">Photos</a></li>',
         '        </ul>',
         '    </nav>',
         '</header>'
@@ -127,8 +128,10 @@ $(function() {
 
     header.html(headerHTML);
 
+    // footer插入
     var footer = $("#footer")
     var footerHTML = [
+
         '<footer class="text-center container">',
         '   <h4 class="text-left">Sponsors:</h4>',
         // '    <div class="xi_an">',
@@ -151,15 +154,24 @@ $(function() {
         '            <a href="http://www.tsinghua.edu.cn/publish/newthu/"><img src="/img/thu.png" alt="thu"></a>',
         '        </li>',
         '    </ul>',
-        '</footer>'
+        '</footer>',
     ].join('');
 
     footer.html(footerHTML);
 
+    // 插入模态框
+    var modalHtml = [
+        '<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>',
+        
+    ].join('');
+
+    $('body').append(modalHtml)
+
+    // 添加active
     var navTop = $('.nav-top');
     var slideDown = $('.slideDown');
     chooseActive();
-    
+
     // 导航栏active选择
     function chooseActive() {
         var pathname = window.location.pathname;
@@ -171,28 +183,29 @@ $(function() {
             case 'submission':
                 navTop.eq(2).addClass('active');
                 break;
-            // case 'program':
-            //     navTop.eq(3).addClass('active');
-            //     break;
-            // case 'registration':
-            //     navTop.eq(4).addClass('active');
-            //     break;
-            // case 'sponsors_exhibitions':
-            //     navTop.eq(5).addClass('active');
-            //     break;
-            case 'hotel_travel':
+            case 'program':
                 navTop.eq(3).addClass('active');
                 break;
-            case 'attractions':
+            case 'registration':
                 navTop.eq(4).addClass('active');
                 break;
-            // case 'photos':
-            //     navTop.eq(8).addClass('active');
-            //     break;
+            case 'sponsors_exhibitions':
+                navTop.eq(5).addClass('active');
+                break;
+            case 'hotel_travel':
+                navTop.eq(6).addClass('active');
+                break;
+            case 'attractions':
+                navTop.eq(7).addClass('active');
+                break;
+            case 'photos':
+                navTop.eq(8).addClass('active');
+                break;
             default:
                 navTop.eq(0).addClass('active');
         }
     }
+
     // 导航栏事件绑定    
     navTop.hover(function(e) {
         var _this = $(this);

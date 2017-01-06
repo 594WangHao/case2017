@@ -29,14 +29,14 @@ header {
             background: @blue;
             border: none;
             padding: 0.5em 2em;
-            margin-bottom: 130px;
+            
         }
     }
     nav {
         width: 100%;
         font-size: 18px;
-        // position: absolute;
-        // bottom: 0;
+        position: absolute;
+        bottom: 0;
         // margin-top: 160px;
         background: rgba(0, 0, 0, 0.5);
         // background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
@@ -107,10 +107,15 @@ header {
 }
 
 footer {
+    border-top: 2px solid @grey;
+    margin-top: 60px;
     padding: 50px 0;
     .xi_an {
         background: @grey;
         padding: 20px 200px;
+    }
+    h4{
+        margin-top: 0;
     }
     .list-inline {
         // padding: 100px 0;
