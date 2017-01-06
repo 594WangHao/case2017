@@ -161,11 +161,37 @@ $(function() {
 
     // 插入模态框
     var modalHtml = [
-        '<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>',
-        
+        '<div class="modal fade" id="modal">',
+        '    <div class="modal-dialog modal-lg">',
+        '        <div class="modal-content">',
+        '            <div class="modal-header">',
+        '                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>',
+        '                <h4 class="modal-title" id="myModalLabel">Modal title</h4>',
+        '            </div>',
+        '            <div class="modal-body">',
+        '            </div>',
+        '            <div class="modal-footer">',
+        '                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>',
+        '            </div>',
+        '        </div>',
+        '    </div>',
+        '</div>',
+        '<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>'
     ].join('');
 
     $('body').append(modalHtml)
+
+    // 点击查看原图
+    $(".img-thumbnail").click(function(e) {
+        var modal = $("#modal");
+        var modalTitle = $(".modal-title")
+        var modalBody = $(".modal-body");
+        var _this = $(this).clone();
+        $(".modal-body img").remove();
+        modalTitle.text(_this.attr("alt"));
+        modalBody.append(_this);  
+        modal.modal();
+    })
 
     // 添加active
     var navTop = $('.nav-top');
