@@ -11,8 +11,8 @@ $(function() {
         '        </p>',
         '        <a href="/submission/calls_for_papers.html" class="btn">Call for Papers</a>',
         '    </div>',
-        '    <nav>',
-        '        <ul class="list-inline text-center">',
+        '    <nav class="container">',
+        '        <ul class="list-inline">',
         '            <li class="nav-top"><a href="/index.html">Home</a>',
         '            </li>',
         '            <li class="nav-top">',
@@ -21,18 +21,18 @@ $(function() {
         '                    <li>',
         '                        <a href="/committees/steering_committee.html">Steering Committee</a>',
         '                    </li>',
-        '                    <li>',
-        '                        <a href="/committees/conference_editorial_board.html">Conference Editorial Board</a>',
-        '                    </li>',
+        // '                    <li>',
+        // '                        <a href="/committees/conference_editorial_board.html">Conference Editorial Board</a>',
+        // '                    </li>',
         '                    <li>',
         '                        <a href="/committees/organizing_committee.html">Organizing Committee</a>',
         '                    </li>',
-        '                    <li>',
-        '                        <a href="/committees/volunteer_form.html">Volunteers</a>',
-        '                    </li>',
-        '                    <li>',
-        '                        <a href="/committees/contact.html">Contact</a>',
-        '                    </li>',
+        // '                    <li>',
+        // '                        <a href="/committees/volunteer_form.html">Volunteers</a>',
+        // '                    </li>',
+        // '                    <li>',
+        // '                        <a href="/committees/contact.html">Contact</a>',
+        // '                    </li>',
         '                </ul>',
         '            </li>',
         '            <li class="nav-top"><a>Submission&nbsp;&nbsp;<span class="fa fa-sort-desc"></span></a>',
@@ -40,65 +40,65 @@ $(function() {
         '                    <li>',
         '                        <a href="/submission/calls_for_papers.html">Call for Papers</a>',
         '                    </li>',
-        '                    <li>',
-        '                        <a href="/submission/final_paper_submission.html">Final Paper Submission</a>',
-        '                    </li>',
-        '                    <li>',
-        '                        <a href="/submission/call_for_late_breaking_results_posters.html">Call for Late Breaking Results Posters</a>',
-        '                    </li>',
-        '                    <li>',
-        '                        <a href="/submission/awards.html">Awards</a>',
-        '                    </li>',
+        // '                    <li>',
+        // '                        <a href="/submission/final_paper_submission.html">Final Paper Submission</a>',
+        // '                    </li>',
+        // '                    <li>',
+        // '                        <a href="/submission/call_for_late_breaking_results_posters.html">Call for Late Breaking Results Posters</a>',
+        // '                    </li>',
+        // '                    <li>',
+        // '                        <a href="/submission/awards.html">Awards</a>',
+        // '                    </li>',
         '                </ul>',
         '            </li>',
-        '            <li class="nav-top"><a>Program&nbsp;&nbsp;<span class="fa fa-sort-desc"></span></a>',
-        '                <ul class="slideDown text-left">',
-        '                    <li>',
-        '                        <a href="/program/case_isam_conference_program.html">CASE Conference Program</a>',
-        '                    </li>',
-        '                    <li>',
-        '                        <a href="/program/plenary_speakers.html">Plenary Speakers</a>',
-        '                    </li>',
-        '                    <li>',
-        '                        <a href="/program/competition.html">Competition</a>',
-        '                    </li>',
-        '                    <li>',
-        '                        <a href="/program/ras_member_luncheons.html">RAS Member Luncheons</a>',
-        '                    </li>',
-        '                    <li>',
-        '                        <a href="/program/meetings.html">Meetings</a>',
-        '                    </li>',
-        '                    <li>',
-        '                        <a href="/program/workshops_and_tutorials.html">Workshops and Tutorials</a>',
-        '                    </li>',
-        '                    <li>',
-        '                        <a href="/program/technical_tours.html">Technical Tours</a>',
-        '                    </li>',
-        '                </ul>',
-        '            </li>',
-        '            <li class="nav-top"><a>Registration&nbsp;&nbsp;<span class="fa fa-sort-desc"></span></a>',
-        '                <ul class="slideDown text-left">',
-        '                    <li>',
-        '                        <a href="/registration/invitation_letter.html">Invitation Letter</a>',
-        '                    </li>',
-        '                    <li>',
-        '                        <a href="/registration/student_travel_awards.html">Student Travel Awards</a>',
-        '                    </li>',
-        '                </ul>',
-        '            </li>',
-        '            <li class="nav-top"><a>Sponsors/Exhibitions&nbsp;&nbsp;<span class="fa fa-sort-desc"></span></a></a>',
-        '                <ul class="slideDown text-left">',
-        '                    <li>',
-        '                        <a href="/sponsors_exhibitions/sponsors_patrons.html">Information</a>',
-        '                    </li>',
-        '                    <li>',
-        '                        <a href="/sponsors_exhibitions/sponsors_2.html">Sponsors</a>',
-        '                    </li>',
-        '                    <li>',
-        '                        <a href="/sponsors_exhibitions/exhibitors.html">Exhibitors</a>',
-        '                    </li>',
-        '                </ul>',
-        '            </li>',
+        // '            <li class="nav-top"><a>Program&nbsp;&nbsp;<span class="fa fa-sort-desc"></span></a>',
+        // '                <ul class="slideDown text-left">',
+        // '                    <li>',
+        // '                        <a href="/program/case_isam_conference_program.html">CASE Conference Program</a>',
+        // '                    </li>',
+        // '                    <li>',
+        // '                        <a href="/program/plenary_speakers.html">Plenary Speakers</a>',
+        // '                    </li>',
+        // '                    <li>',
+        // '                        <a href="/program/competition.html">Competition</a>',
+        // '                    </li>',
+        // '                    <li>',
+        // '                        <a href="/program/ras_member_luncheons.html">RAS Member Luncheons</a>',
+        // '                    </li>',
+        // '                    <li>',
+        // '                        <a href="/program/meetings.html">Meetings</a>',
+        // '                    </li>',
+        // '                    <li>',
+        // '                        <a href="/program/workshops_and_tutorials.html">Workshops and Tutorials</a>',
+        // '                    </li>',
+        // '                    <li>',
+        // '                        <a href="/program/technical_tours.html">Technical Tours</a>',
+        // '                    </li>',
+        // '                </ul>',
+        // '            </li>',
+        // '            <li class="nav-top"><a>Registration&nbsp;&nbsp;<span class="fa fa-sort-desc"></span></a>',
+        // '                <ul class="slideDown text-left">',
+        // '                    <li>',
+        // '                        <a href="/registration/invitation_letter.html">Invitation Letter</a>',
+        // '                    </li>',
+        // '                    <li>',
+        // '                        <a href="/registration/student_travel_awards.html">Student Travel Awards</a>',
+        // '                    </li>',
+        // '                </ul>',
+        // '            </li>',
+        // '            <li class="nav-top"><a>Sponsors/Exhibitions&nbsp;&nbsp;<span class="fa fa-sort-desc"></span></a></a>',
+        // '                <ul class="slideDown text-left">',
+        // '                    <li>',
+        // '                        <a href="/sponsors_exhibitions/sponsors_patrons.html">Information</a>',
+        // '                    </li>',
+        // '                    <li>',
+        // '                        <a href="/sponsors_exhibitions/sponsors_2.html">Sponsors</a>',
+        // '                    </li>',
+        // '                    <li>',
+        // '                        <a href="/sponsors_exhibitions/exhibitors.html">Exhibitors</a>',
+        // '                    </li>',
+        // '                </ul>',
+        // '            </li>',
         '            <li class="nav-top"><a>Hotel/Travel&nbsp;&nbsp;<span class="fa fa-sort-desc"></span></a>',
         '                <ul class="slideDown text-left">',
         '                    <li>',
@@ -119,7 +119,7 @@ $(function() {
         '                    </li>',
         '                </ul>',
         '            </li>',
-        '            <li class="nav-top"><a href="/photos/photos.html">Photos</a></li>',
+        // '            <li class="nav-top"><a href="/photos/photos.html">Photos</a></li>',
         '        </ul>',
         '    </nav>',
         '</header>'
@@ -170,24 +170,24 @@ $(function() {
             case 'submission':
                 navTop.eq(2).addClass('active');
                 break;
-            case 'program':
+            // case 'program':
+            //     navTop.eq(3).addClass('active');
+            //     break;
+            // case 'registration':
+            //     navTop.eq(4).addClass('active');
+            //     break;
+            // case 'sponsors_exhibitions':
+            //     navTop.eq(5).addClass('active');
+            //     break;
+            case 'hotel_travel':
                 navTop.eq(3).addClass('active');
                 break;
-            case 'registration':
+            case 'attractions':
                 navTop.eq(4).addClass('active');
                 break;
-            case 'sponsors_exhibitions':
-                navTop.eq(5).addClass('active');
-                break;
-            case 'hotel_travel':
-                navTop.eq(6).addClass('active');
-                break;
-            case 'attractions':
-                navTop.eq(7).addClass('active');
-                break;
-            case 'photos':
-                navTop.eq(8).addClass('active');
-                break;
+            // case 'photos':
+            //     navTop.eq(8).addClass('active');
+            //     break;
             default:
                 navTop.eq(0).addClass('active');
         }
