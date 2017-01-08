@@ -123,10 +123,11 @@ $(function() {
         '            <li class="nav-top"><a href="/photos/photos.html">Photos</a></li>',
         '        </ul>',
         '    </nav>',
-        '</header>'
+        '</header>',
     ].join('');
 
     header.html(headerHTML);
+
 
     // footer插入
     var footer = $("#footer")
@@ -181,6 +182,8 @@ $(function() {
 
     $('body').append(modalHtml)
 
+
+
     // 点击查看原图
     $(".img-thumbnail").click(function(e) {
         var modal = $("#modal");
@@ -189,19 +192,41 @@ $(function() {
         var _this = $(this).clone();
         $(".modal-body img").remove();
         modalTitle.text(_this.attr("alt"));
-        modalBody.append(_this);  
+        modalBody.append(_this);
         modal.modal();
     })
 
-    // 添加active
+    // 添加active, 路径导航
     var navTop = $('.nav-top');
     var slideDown = $('.slideDown');
     chooseActive();
+    breadcrumb();
 
-    // 导航栏active选择
+
+    // 导航栏事件绑定    
+    navTop.hover(function(e) {
+        var _this = $(this);
+        var index = _this.index() - 1;
+        _this.addClass('active');
+        if (index >= 0) {
+            slideDown.eq(index).show();
+        }
+
+    }, function(e) {
+        var _this = $(this);
+        var index = _this.index() - 1;
+        _this.removeClass('active');
+        if (index >= 0) {
+            slideDown.eq(index).hide();
+        }
+        chooseActive();
+    })
+
+    // 导航栏active, 路径导航
     function chooseActive() {
         var pathname = window.location.pathname;
         var path = pathname.split('/')[1];
+        
         switch (path) {
             case 'committees':
                 navTop.eq(1).addClass('active');
@@ -232,24 +257,17 @@ $(function() {
         }
     }
 
-    // 导航栏事件绑定    
-    navTop.hover(function(e) {
-        var _this = $(this);
-        var index = _this.index() - 1;
-        _this.addClass('active');
-        if (index >= 0) {
-            slideDown.eq(index).show();
+    function breadcrumb() {
+        var pagetitle = $("h2").text();
+        if (pagetitle !== '') {
+            liHtml = [
+
+            '<ul class="breadcrumb container">',
+                '<li><a href="/">Home</a></li>',
+                '<li>' + pagetitle + '</li>',
+            '</ul>'                
+            ].join('');
+            header.append(liHtml);
         }
-
-    }, function(e) {
-        var _this = $(this);
-        var index = _this.index() - 1;
-        _this.removeClass('active');
-        if (index >= 0) {
-            slideDown.eq(index).hide();
-        }
-        chooseActive();
-    })
-
-
+    }
 })
