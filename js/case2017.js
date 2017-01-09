@@ -200,7 +200,7 @@ $(function() {
     var navTop = $('.nav-top');
     var slideDown = $('.slideDown');
     chooseActive();
-    breadcrumb();
+    breadcrumb_title();
 
 
     // 导航栏事件绑定    
@@ -226,7 +226,7 @@ $(function() {
     function chooseActive() {
         var pathname = window.location.pathname;
         var path = pathname.split('/')[1];
-        
+
         switch (path) {
             case 'committees':
                 navTop.eq(1).addClass('active');
@@ -257,17 +257,32 @@ $(function() {
         }
     }
 
-    function breadcrumb() {
+    function breadcrumb_title() {
         var pagetitle = $("h2").text();
+        var title = $("title");
         if (pagetitle !== '') {
+
+            if (pagetitle === 'Templates') {
+                liHtml = [
+
+                    '<ul class="breadcrumb container">',
+                    '<li><a href="/">Home</a></li>',
+                    '<li>' + 'Paper Submission' + '</li>',
+                    '</ul>'
+                ].join('');
+                header.append(liHtml);
+                title.text('Paper Submission');
+                return;
+            }
             liHtml = [
 
-            '<ul class="breadcrumb container">',
+                '<ul class="breadcrumb container">',
                 '<li><a href="/">Home</a></li>',
                 '<li>' + pagetitle + '</li>',
-            '</ul>'                
+                '</ul>'
             ].join('');
             header.append(liHtml);
+            title.text(pagetitle);
         }
     }
 })
