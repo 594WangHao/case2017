@@ -285,4 +285,9 @@ $(function() {
             title.text(pagetitle);
         }
     }
+
+
+    console.log('constructed by %cJordi Wang', 'font-weight:bold', 'XI\'AN JIAOTONG UNIVERSITY')
+    console.log('github:https://github.com/594WangHao')
+    console.log('email:jordiwang@outlook.com')
 })

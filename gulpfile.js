@@ -10,13 +10,13 @@ gulp.task('css', function() {
         .src('./less/case2017.less')
         .pipe(less())
         .pipe(concat('case2017.css'))
-        .pipe(cleanCSS())
+        .pipe(cleanCSS())       // 压缩代码
         .pipe(gulp.dest('./www/css/'))
 });
 
 gulp.task('js', function () {
     gulp.src('./js/case2017.js')
-    .pipe(uglify())
+    .pipe(uglify())         // 压缩代码
     .pipe(gulp.dest('./www/js/'))
 })
 
